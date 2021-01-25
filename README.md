@@ -24,10 +24,10 @@ great blog does and pander to the masses!
 We want to start by adding some controls to our view to do the
 filtering:
 
-```erb
+```ruby
 <!-- app/views/posts/index.html.erb -->
 
-<h1>Believe It Or Not I'm Blogging On Air</h1>
+<h1>Believe It Or Not Im Blogging On Air</h1>
 
 <!-- add this new code above the @posts.each loop -->
 <div>
@@ -56,7 +56,7 @@ filtering.
 Since we're here, we'll just add it right into the view. At the top of
 our `index` view, let's add the following:
 
-```erb
+```ruby
 <!-- app/views/posts/index.html.erb -->
 
 <!-- new code starts here -->
@@ -99,7 +99,7 @@ freshest hot takes.
 
 Let's get back into our view and add the new filter to our form:
 
-```erb
+```ruby
 <!-- app/views/posts/index.html.erb -->
 
 <%= form_tag("/posts", method: "get") do %>
@@ -114,7 +114,7 @@ Let's get back into our view and add the new filter to our form:
 And then let's activate that filter so the new code at the top of our
 view looks like this:
 
-```erb
+```ruby
 <!-- app/views/posts/index.html.erb -->
 
 <% if !params[:author].blank? %>
@@ -127,7 +127,7 @@ view looks like this:
   <% end %>
 <% end %>
 
-<h1>Believe It Or Not I'm Blogging On Air</h1>
+<h1>Believe It Or Not Im Blogging On Air</h1>
 
   ...
 ```
@@ -162,7 +162,7 @@ Okay. Let's get to work. First, let's dive back into the `posts#index` view
 and kill that filter logic. Just straight up delete everything that comes
 before the `<h1>` so that it looks like this:
 
-```erb
+```ruby
 <!-- app/views/posts/index.html.erb -->
 
 <h1>Believe It Or Not I'm Blogging On Air</h1>
